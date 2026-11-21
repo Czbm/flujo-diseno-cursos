@@ -2,6 +2,11 @@
 
 Todos los cambios relevantes del ecosistema se documentan en este archivo.
 
+## [4.2.1] - 2026-11-21
+
+### Añadido
+- Nueva skill **`00.P` (`skills/00p-extractor-perfil-estilo/SKILL.md`, v1.0)** para extraer, calibrar o consolidar el perfil semántico y de estilo editorial del docente (Modo Corpus, Modo Entrevista guiada y Modo Consolidación), registrada en `manifest.yaml` y `README.md`.
+
 ## [4.2.0] - 2026-11-21
 
 ### Migración inicial a estructura Open Source + Plugin

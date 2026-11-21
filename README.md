@@ -8,7 +8,7 @@
 
 [![Versión](https://img.shields.io/badge/ecosistema-v4.2.0-blue.svg)](CHANGELOG.md)
 [![Alcance](https://img.shields.io/badge/grado%20acad%C3%A9mico-cualquier%20nivel-0ea5e9.svg)](#-qué-es)
-[![Skills](https://img.shields.io/badge/skills-15%20modulares-10b981.svg)](manifest.yaml)
+[![Skills](https://img.shields.io/badge/skills-16%20modulares-10b981.svg)](manifest.yaml)
 [![Orquestador](https://img.shields.io/badge/agente-orquestador%20aut%C3%B3nomo-6366f1.svg)](agents/orquestador-curso.md)
 [![Licencia](https://img.shields.io/badge/licencia-Apache%202.0-orange.svg)](LICENSE)
 [![Contribuciones](https://img.shields.io/badge/contribuciones-bienvenidas-brightgreen.svg)](CONTRIBUTING.md)
@@ -35,6 +35,7 @@ A partir de un **temario oficial**, un **calendario académico** y el **encuadre
 
 | Etapa | Qué produce |
 |---|---|
+| **Perfil semántico docente** | **Perfil de estilo y semántica propia** (`00.P`) extraído desde corpus real, entrevista guiada o consolidación, que alimenta a `03.D`, `03.E` y `04.B`. |
 | **Planeación curricular** | **Documento Maestro del Curso** (ponderación temática, actividades oficiales con IDs estables, matriz de trazabilidad de competencias y calendario completo) + **Replaneación extraordinaria** ante cambios de calendario. |
 | **Diseño por sesión** | **Briefs contractuales por sesión** que fijan alcance, prerrequisitos, pesos por subtema y actividades vinculadas. |
 | **Desarrollo disciplinar** | **Ficha Teórica** (conceptos clasificados por nivel de desarrollo y bibliografía) y **Ficha Normativa** (marco regulatorio y contexto técnico aplicable). |
@@ -80,6 +81,9 @@ flowchart TD
     VIS --> S03D["03.D · Presentación + Guía Docente"]
     VIS --> S03E["03.E · Capítulo de Libro Autónomo"]
 
+    S00P["00.P · Extractor de Perfil Docente"] -. "Semántica y voz propia" .-> S03D
+    S00P -. "Semántica y voz propia" .-> S03E
+
     S03D --> S04A["04.A · Auditoría de Coherencia (4 capas)"]
     S03E --> S04A
 
@@ -97,6 +101,7 @@ flowchart TD
 | ID | Componente | Versión | Estado | Archivo |
 |---|---|---:|---|---|
 | `00` | **Orquestador Autónomo** *(Agente)* | `1.1` | Estable | [`agents/orquestador-curso.md`](agents/orquestador-curso.md) |
+| `00.P` | **Extractor de Perfil Semántico y de Estilo** | `1.0` | Estable | [`skills/00p-extractor-perfil-estilo/SKILL.md`](skills/00p-extractor-perfil-estilo/SKILL.md) |
 | `01` | **Planeación General del Curso** | `1.6` | Estable | [`skills/01-planeacion-curso/SKILL.md`](skills/01-planeacion-curso/SKILL.md) |
 | `01.R` | **Replaneador por Cambio de Calendario** | `0.1` | Borrador | [`skills/01r-replaneador-calendario/SKILL.md`](skills/01r-replaneador-calendario/SKILL.md) |
 | `02` | **Briefs por Sesión** | `2.8` | Estable | [`skills/02-briefs-sesion/SKILL.md`](skills/02-briefs-sesion/SKILL.md) |
@@ -121,7 +126,7 @@ flowchart TD
 ### Opción 1 · Uso con Agentes / Plugin (Antigravity, Claude Code, Cursor, Gemini CLI, Codex)
 
 1. Clona el repositorio o instálalo como plugin local (incluye [`plugin.json`](plugin.json) y [`AGENTS.md`](AGENTS.md)).
-2. *(Opcional)* Crea tu propio perfil de voz docente copiando [`profiles/template-perfil-estilo.md`](profiles/template-perfil-estilo.md) (puedes ver un ejemplo real en [`profiles/crc-referencia.md`](profiles/crc-referencia.md)).
+2. *(Opcional)* Genera tu perfil de semántica y voz docente ejecutando la skill [`00p-extractor-perfil-estilo`](skills/00p-extractor-perfil-estilo/SKILL.md) con tus propios textos o mediante entrevista guiada (también puedes copiar [`profiles/template-perfil-estilo.md`](profiles/template-perfil-estilo.md) o ver un ejemplo real en [`profiles/crc-referencia.md`](profiles/crc-referencia.md)).
 3. Ejecuta el agente [`agents/orquestador-curso.md`](agents/orquestador-curso.md) sobre la carpeta de tu asignatura, o invoca cualquier skill de forma puntual (por ejemplo, `01-planeacion-curso` para empezar desde tu temario).
 
 ### Opción 2 · Uso manual en cualquier chat de IA (ChatGPT, Claude, Gemini)
@@ -140,7 +145,7 @@ flujo-diseno-cursos/
 ├── manifest.yaml            # Registro central de versiones y dependencias
 ├── AGENTS.md                # Instrucciones raíz para agentes de código
 ├── agents/                  # Agente orquestador autónomo (00)
-├── skills/                  # 15 skills modulares en formato estándar SKILL.md
+├── skills/                  # 16 skills modulares en formato estándar SKILL.md
 ├── profiles/                # Plantilla de estilo docente y perfiles de referencia
 ├── rules/                   # Reglas transversales del ecosistema
 ├── docs/                    # Guía operativa completa del flujo

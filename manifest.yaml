@@ -11,6 +11,13 @@ orchestrator:
   path: "agents/orquestador-curso.md"
 
 skills:
+  - id: "00.P"
+    name: "00p-extractor-perfil-estilo"
+    version: "1.0"
+    status: "stable"
+    path: "skills/00p-extractor-perfil-estilo/SKILL.md"
+    depends_on: []
+
   - id: "01"
     name: "01-planeacion-curso"
     version: "1.6"
