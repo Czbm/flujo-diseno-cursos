@@ -5,7 +5,7 @@
   "author": "Ing. Christian Ramón Chi",
   "repository": "https://github.com/Czbm/flujo-diseno-cursos",
   "logo": "assets/avatar.png",
-  "description": "Ecosistema modular de skills y agente orquestador aplicable a cualquier grado académico, disciplina y modalidad para transformar un temario oficial en un sistema didáctico trazable: planeación, briefs, fichas, estrategia visual, guiones, capítulos de libro, auditoría y compilación.",
+  "description": "Ecosistema modular de skills y agente orquestador aplicable a cualquier grado académico, disciplina y modalidad para transformar un temario oficial en un sistema didáctico trazable y redactado con la semántica propia del docente.",
   "suggestedPrompts": [
     "Inicia la planeación general del curso (01) a partir de este temario y calendario",
     "Ejecuta el orquestador autónomo sobre el workspace actual de mi asignatura",

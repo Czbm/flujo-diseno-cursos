@@ -25,7 +25,7 @@
 
 En lugar de depender de un solo prompt gigante o de chats aislados que pierden coherencia entre sesiones, este proyecto divide el diseño instruccional en **etapas especializadas conectadas por contratos explícitos**, igual que un pipeline de ingeniería de software: cada etapa tiene entradas definidas, reglas estrictas, salidas verificables y propiedad clara sobre lo que puede o no modificar.
 
-El sistema fue diseñado desde su origen para **aplicarse a cualquier grado académico** (educación básica, media superior, técnico superior, licenciatura, ingeniería, posgrado o formación continua), **cualquier disciplina** y **cualquier modalidad** (presencial, híbrida o en línea). Su etapa de auditoría (`04.A`) verifica específicamente que la profundidad real del contenido coincida con el nivel académico declarado. Además, es compatible tanto con herramientas de agentes (Antigravity, Claude Code, Cursor, Gemini CLI, Codex) como con uso manual paso a paso en cualquier chat de IA.
+El sistema fue diseñado desde su origen para **aplicarse a cualquier grado académico** (educación básica, media superior, técnico superior, licenciatura, ingeniería, posgrado o formación continua), **cualquier disciplina** y **cualquier modalidad** (presencial, híbrida o en línea). Su etapa de auditoría (`04.A`) verifica específicamente que la profundidad real del contenido coincida con el nivel académico declarado, mientras que los perfiles en [`profiles/`](profiles/template-perfil-estilo.md) garantizan que los materiales se redacten **usando la semántica, terminología y voz propia del docente**, evitando textos genéricos de IA. Además, es compatible tanto con herramientas de agentes (Antigravity, Claude Code, Cursor, Gemini CLI, Codex) como con uso manual paso a paso en cualquier chat de IA.
 
 ---
 
@@ -39,7 +39,7 @@ A partir de un **temario oficial**, un **calendario académico** y el **encuadre
 | **Diseño por sesión** | **Briefs contractuales por sesión** que fijan alcance, prerrequisitos, pesos por subtema y actividades vinculadas. |
 | **Desarrollo disciplinar** | **Ficha Teórica** (conceptos clasificados por nivel de desarrollo y bibliografía) y **Ficha Normativa** (marco regulatorio y contexto técnico aplicable). |
 | **Estrategia y producción visual** | **Orquestación visual por necesidad didáctica**, diferenciando recursos externos (resueltos y atribuidos) de recursos generativos (diseñados, auditados semánticamente con `PASS / RETURN` y ejecutados). |
-| **Materiales didácticos duales** | **Paquete sincrónico** (presentación proyectable en Markdown para alumno + guía docente, optimizada para **NUMA Deck Presentations** *(próximamente en GitHub)*) y **paquete asincrónico** (capítulo autocontenido del libro de la materia), generados en paralelo sin dependencia mutua. |
+| **Materiales didácticos duales** | **Paquete sincrónico** (presentación proyectable en Markdown para alumno + guía docente, optimizada para **NUMA Deck Presentations** *(próximamente en GitHub)*) y **paquete asincrónico** (capítulo autocontenido del libro de la materia), generados en paralelo sin dependencia mutua y **redactados con la semántica propia del docente**. |
 | **Control de calidad y mejora** | **Auditoría académica en 4 capas** (trazabilidad, nivel, legibilidad editorial y fidelidad visual) + **implementación controlada de mejoras** con escalado formal cuando el ajuste corresponde a una etapa anterior. |
 | **Compilación editorial** | **Libro unificado de la asignatura** compilado a partir de los capítulos aprobados + reporte editorial de compilación. |
 
@@ -52,7 +52,7 @@ El ecosistema opera bajo **cuatro principios arquitectónicos**:
 1. **Contratos explícitos entre etapas:** cada skill declara exactamente qué consume y qué entrega. Los cambios en una etapa no rompen silenciosamente a las siguientes.
 2. **Separación entre producción y auditoría:** el control de calidad (`04.A`) está desacoplado de la redacción (`03.D` / `03.E`) y de la corrección (`04.B`). Quien implementa mejoras downstream nunca altera por su cuenta contratos upstream.
 3. **Orquestación idempotente y reanudable:** el agente coordinador (`00`) sigue el principio **`inspeccionar → clasificar → reutilizar → ejecutar → verificar → reanudar`**. Detecta qué artefactos ya son vigentes y regenera únicamente lo faltante o lo que quedó obsoleto por un cambio upstream.
-4. **Voz docente desacoplada:** las skills definen el rigor metodológico, mientras que el tono y estilo editorial viven en perfiles intercambiables dentro de [`profiles/`](profiles/template-perfil-estilo.md).
+4. **Semántica y voz propia del docente (desacoplada):** las skills garantizan el rigor metodológico y curricular, mientras que la **semántica propia del docente** —su vocabulario disciplinar, distinciones conceptuales, ritmo, estructura argumentativa y registro documental— se configura mediante perfiles intercambiables en [`profiles/`](profiles/template-perfil-estilo.md). Así, los guiones y capítulos suenan genuinamente al docente y no a prosa genérica de IA.
 
 ### Flujo general del ecosistema
 
