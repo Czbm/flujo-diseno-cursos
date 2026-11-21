@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporales de pruebas locales de cursos
+workspace-test/
+preview-readme.html
+*.tmp
+*.bak
