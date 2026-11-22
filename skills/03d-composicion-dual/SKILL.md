@@ -8,7 +8,7 @@ status: stable
 
 # Skill: Composición Dual NUMA — Presentación + Guía Docente (03d) — v2.1
 
-> **Visor y proyector recomendado:** las presentaciones Markdown y guías docentes generadas por esta skill están diseñadas para abrirse y proyectarse de forma nativa en **NUMA Deck Presentations** (`NUMA PRESENTATION MD`, *próximamente en GitHub*), con soporte para modo dual, KaTeX, SVG/imágenes y control remoto móvil.
+> **Visor y proyector recomendado:** las presentaciones Markdown y guías docentes generadas por esta skill están diseñadas para abrirse y proyectarse de forma nativa en [**NUMA Deck Presentations**](https://github.com/Czbm/numa-deck-presentations), con soporte para modo dual, KaTeX, SVG/imágenes y control remoto móvil (*Android-Link*).
 
 ## Propósito
 

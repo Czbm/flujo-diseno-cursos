@@ -13,7 +13,7 @@
 [![Licencia](https://img.shields.io/badge/licencia-Apache%202.0-orange.svg)](LICENSE)
 [![Contribuciones](https://img.shields.io/badge/contribuciones-bienvenidas-brightgreen.svg)](CONTRIBUTING.md)
 
-[¿Qué es?](#-qué-es) • [¿Qué produce?](#-qué-hace-entregables) • [¿Cómo funciona?](#-cómo-lo-hace) • [Mapa de Skills](#-mapa-del-ecosistema) • [Inicio Rápido](#-cómo-empezar) • [Contribuir](#-contribuir)
+[¿Qué es?](#-qué-es) • [¿Qué produce?](#-qué-hace-entregables) • [¿Cómo funciona?](#-cómo-lo-hace) • [Mapa de Skills](#-mapa-del-ecosistema) • [NUMA Deck](#-proyección-nativa-numa-deck-presentations) • [Inicio Rápido](#-cómo-empezar) • [Contribuir](#-contribuir)
 
 </div>
 
@@ -40,7 +40,7 @@ A partir de un **temario oficial**, un **calendario académico** y el **encuadre
 | **Diseño por sesión** | **Briefs contractuales por sesión** que fijan alcance, prerrequisitos, pesos por subtema y actividades vinculadas. |
 | **Desarrollo disciplinar** | **Ficha Teórica** (conceptos clasificados por nivel de desarrollo y bibliografía) y **Ficha Normativa** (marco regulatorio y contexto técnico aplicable). |
 | **Estrategia y producción visual** | **Orquestación visual por necesidad didáctica**, diferenciando recursos externos (resueltos y atribuidos) de recursos generativos (diseñados, auditados semánticamente con `PASS / RETURN` y ejecutados). |
-| **Materiales didácticos duales** | **Paquete sincrónico** (presentación proyectable en Markdown para alumno + guía docente, optimizada para **NUMA Deck Presentations** *(próximamente en GitHub)*) y **paquete asincrónico** (capítulo autocontenido del libro de la materia), generados en paralelo sin dependencia mutua y **redactados con la semántica propia del docente**. |
+| **Materiales didácticos duales** | **Paquete sincrónico** (presentación proyectable en Markdown para alumno + guía docente, optimizada para [**NUMA Deck Presentations**](https://github.com/Czbm/numa-deck-presentations)) y **paquete asincrónico** (capítulo autocontenido del libro de la materia), generados en paralelo sin dependencia mutua y **redactados con la semántica propia del docente**. |
 | **Control de calidad y mejora** | **Auditoría académica en 4 capas** (trazabilidad, nivel, legibilidad editorial y fidelidad visual) + **implementación controlada de mejoras** con escalado formal cuando el ajuste corresponde a una etapa anterior. |
 | **Compilación editorial** | **Libro unificado de la asignatura** compilado a partir de los capítulos aprobados + reporte editorial de compilación. |
 
@@ -173,10 +173,15 @@ python scripts/validate_repo.py
 
 ---
 
-## Proyectos relacionados
+## Proyección nativa: NUMA Deck Presentations
 
-- **NUMA Deck Presentations (`NUMA PRESENTATION MD`)** — *Próximamente en GitHub*  
-  Aplicación de escritorio para proyectar y presentar directamente los archivos Markdown generados por la etapa [`03.D`](skills/03d-composicion-dual/SKILL.md) (presentación para alumno + guía docente en modo dual), con soporte para KaTeX, gráficos SVG/imágenes, vista previa sincronizada y control remoto móvil (*Android-Link*).
+Las presentaciones Markdown y guías docentes generadas por la etapa [`03.D`](skills/03d-composicion-dual/SKILL.md) están diseñadas para abrirse y proyectarse de forma nativa en [**NUMA Deck Presentations**](https://github.com/Czbm/numa-deck-presentations):
+
+- **Modo dual sincronizado:** proyecta las diapositivas limpias para el alumno mientras el docente consulta su guía en pantalla paralela.
+- **Soporte técnico completo:** renderizado de fórmulas **KaTeX**, gráficos **SVG e imágenes** con zoom interactivo y paginación inteligente de tablas.
+- **Control remoto móvil (*Android-Link*):** navegación de slides, puntero en pantalla y apertura de imágenes desde el celular (WebSocket / conexión directa).
+
+👉 **Repositorio oficial:** [github.com/Czbm/numa-deck-presentations](https://github.com/Czbm/numa-deck-presentations)
 
 ---
 
