@@ -7,6 +7,9 @@ Todos los cambios relevantes del ecosistema se documentan en este archivo.
 ### Añadido
 - Nueva skill **`00.P` (`skills/00p-extractor-perfil-estilo/SKILL.md`, v1.0)** para extraer, calibrar o consolidar el perfil semántico y de estilo editorial del docente (Modo Corpus, Modo Entrevista guiada y Modo Consolidación), registrada en `manifest.yaml` y `README.md`.
 
+### Modificado
+- Actualizado el esquema de licenciamiento a **licencia dual**: **CC BY-SA 4.0** para skills, agentes, metodología y documentación (`LICENSE-CC-BY-SA-4.0`) + **Apache 2.0** para código y scripts (`LICENSE-APACHE`), con aclaración explícita en `LICENSE` sobre la propiedad de los cursos generados por usuarios.
+
 ## [4.2.0] - 2026-11-21
 
 ### Migración inicial a estructura Open Source + Plugin

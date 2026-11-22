@@ -10,7 +10,7 @@
 [![Alcance](https://img.shields.io/badge/grado%20acad%C3%A9mico-cualquier%20nivel-0ea5e9.svg)](#-qué-es)
 [![Skills](https://img.shields.io/badge/skills-16%20modulares-10b981.svg)](manifest.yaml)
 [![Orquestador](https://img.shields.io/badge/agente-orquestador%20aut%C3%B3nomo-6366f1.svg)](agents/orquestador-curso.md)
-[![Licencia](https://img.shields.io/badge/licencia-Apache%202.0-orange.svg)](LICENSE)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0%20%2B%20Apache%202.0-orange.svg)](LICENSE)
 [![Contribuciones](https://img.shields.io/badge/contribuciones-bienvenidas-brightgreen.svg)](CONTRIBUTING.md)
 
 [¿Qué es?](#-qué-es) • [¿Qué produce?](#-qué-hace-entregables) • [¿Cómo funciona?](#-cómo-lo-hace) • [Mapa de Skills](#-mapa-del-ecosistema) • [NUMA Deck](#-proyección-nativa-numa-deck-presentations) • [Inicio Rápido](#-cómo-empezar) • [Contribuir](#-contribuir)
@@ -187,5 +187,9 @@ Las presentaciones Markdown y guías docentes generadas por la etapa [`03.D`](sk
 
 ## Autoría y Licencia
 
-Creado y mantenido por **Ing. Christian Ramón Chi** y contribuidores de la comunidad.  
-Distribuido bajo licencia **Apache 2.0** — consulta [`LICENSE`](LICENSE) para más detalles.
+Creado y mantenido por **Ing. Christian Ramón Chi** y contribuidores de la comunidad.
+
+Este repositorio utiliza **licencia dual** (consulta [`LICENSE`](LICENSE)):
+- **Skills, agentes, metodología y documentación** (`skills/`, `agents/`, `docs/`, `profiles/`, `rules/`): [**CC BY-SA 4.0**](LICENSE-CC-BY-SA-4.0) *(Reconocimiento-CompartirIgual — las mejoras a las skills deben seguir siendo abiertas)*.
+- **Código fuente y scripts** (`scripts/`, workflows y manifiestos): [**Apache 2.0**](LICENSE-APACHE).
+- **Cursos generados por docentes:** el material académico que produzcas *usando* estas skills te pertenece íntegramente y no hereda la cláusula *ShareAlike*.
